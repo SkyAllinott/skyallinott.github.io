@@ -1,0 +1,194 @@
+/* css for new landing page */
+h1, h2, a, p {
+	font-family: Roboto;
+	font-color: white;
+}
+
+body {
+	background-color: #212121;
+	color: white;
+}
+/* bio formatting */
+div#intro  {
+	color: white;
+	font-size: 100px;
+	text-align:center;
+}
+div#intro a {
+	font-size: 100px;
+}
+div#intro td{
+	margin: 0;
+	padding: 50px;
+}
+/*nav bar */
+div#navBar {
+}
+div#navBar ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background-color:#212121;
+}
+div#navBar a{
+	text-align:center;
+	padding:0px 60px;
+	text-decoration:none;
+	font-size:30px;
+	color: white;
+}
+div#navBar li{
+	float:left;
+}
+	/*Add a background colour on mouse-over*/
+div#navBar a:hover{
+	background-color:#4CAF50;
+}
+	/*Style the current/active link*/
+div#navBar a.active {
+	background-color:#4CAF50;	
+}
+
+/* constants */
+.smallContent {
+	width: 850px;
+	align-items:center;
+}
+div.centerContent{
+	margin:auto;
+	display:block;
+	max-width:1300px;
+	padding:none;
+}
+.centerContent p{
+	max-width:700px;
+	font-size:45px;
+	margin:auto;
+	margin-left:-20%;
+	margin-top:-40%;
+	padding-top:1em;
+
+}
+.centerContent h1{
+	font-size:60px;
+	margin:auto;
+	margin-left:-40%;
+	text-decoration:none;
+}
+.centerContent img{
+	margin:auto;
+	margin-top:20%;
+	margin-left:-50%;
+}
+div.centerContent2 {
+	font-size:50px;
+	max-width:900px;
+	padding-left:-200px;
+	margin-left: 790px;
+}
+.centerContent2 p{
+	margin:auto;
+	margin-left:0%;
+	margin-top:-50%;
+	min-width:650px;
+	max-width:800px;
+	font-size:40px;
+}
+/*Resume Contents*/
+div.Resume {
+	margin:auto;
+}
+div.resumeContent {
+	font-size:25px;
+	max-width:600px;
+	margin:auto;
+	min-width:50px;
+}
+.resumeContent a{
+	color:#4CAF50;
+}
+.resumeContent p{
+	margin-left:25%;
+	max-width:800px;
+}
+.resumeContent table{
+	margin:auto;
+	max-width:1000px;
+}
+.resumeContent table{
+	margin:auto;
+}
+/* JumpLinks */
+.projectContent div.buttons {
+	width:100%;
+}
+.projectContent .buttons td{
+	padding: 0 20px;
+}
+.projectContent .buttons table{
+	margin: 0 auto;
+}
+/*Project Page */
+div.projectContent {
+	margin: auto;
+	margin-top:40px;
+	width: 1000px;
+}
+.projectContent p{
+	font-size:30px;
+	text-align:center;
+	border:3px;
+	border-style: solid;
+	background-color:#4CAF50;
+	padding-bottom:15px;
+	padding-top:15px;
+}
+.projectContent h3{
+	text-align:center;
+}
+.projectContent a{
+	text-decoration:underline;
+	color:#4CAF50;
+}
+.projectContent h1{
+	font-size:30px;
+	text-decoration:underline;
+	padding-right:30%;
+	padding-left:7%;
+	margin:auto;
+	padding-bottom:5px;
+}
+.projectIcons2 {
+	margin-left:5%;
+	margin-bottom:-2%;
+}
+.projectIcons1 {
+	margin-left:5%;
+	margin-bottom: -2%;
+}
+img.projPic {
+	width: 100%;
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-bottom: 5%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4CAF50;
+}
+div.Title {
+	margin:auto;
+	width: 800px;
+	height:70px;
+	font-size: 50px;
+	border:3px;
+	border-color:white;
+	text-align:center;
+	margin-bottom:2%;
+}
+div.Title p{
+	border:3px;
+	border-style:solid;
+	background-color:#4CAF50;
+	padding:1%;
+}

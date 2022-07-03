@@ -193,3 +193,21 @@ div.Title p{
 	background-color:#4CAF50;
 	padding:1%;
 }
+
+div.socials a{
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+}
+
+div.socials p{
+	position: absolute;
+	bottom: 75px;
+	font-size: 30px;
+}
+
+div.socials2 a{
+	position: absolute;
+	bottom: 15px;
+	left: 115px;
+}

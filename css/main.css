@@ -200,14 +200,15 @@ div.socials a{
 	left: 15px;
 }
 
-div.socials p{
-	position: absolute;
-	bottom: 75px;
+div.socials p{;
 	font-size: 30px;
+	position: absolute;
+	bottom: 70px;
+	left: 15px;
 }
 
 div.socials2 a{
 	position: absolute;
 	bottom: 15px;
-	left: 115px;
+	left: 100px;
 }

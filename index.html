@@ -4,18 +4,24 @@
 		<!-- page setup -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 		<link href="./css/main.css" type="text/css" rel="stylesheet" />
-		<link rel="shortcut icon" type="image/png" href="pi.png"/>
+		<link rel="shortcut icon" type="image/png" href="./Pages/Icons/pi.png"/>
 		<title>Sky Allinott</title>
 		
 		<!-- navigation bar -->
-		<div id="navBar">
+		<nav>
 			<ul>
 				<li id="Bret"><a class="active" href="index.html" target="_self"> Sky Allinott</a></li>
 				<li><a href="./Pages/Resume.html" target="_self"> CV </a></li>
-				<li><a href="./Pages/Projects.html" target="_self"> Projects </a></li>
+				<li><a href="./Pages/Projects.html" target="_self"> Projects ▾ </a>
+					<ul>
+						<li><a href="./Pages/forecast.html" target="_self"> Forecasting </a></li>
+                        <li><a href="./Pages/machinelearning.html" target="_self"> Machine Learning </a></li>
+                        <li><a href="./Pages/other.html" target="_self"> Other </a></li>
+					</ul>
+				</li>
                 <li><a href="./Pages/Research.html" target="_self"> Research </a></li>
 			</ul>
-		</div>
+		</nav>
 	</head>
 	<body>
 		<!-- icon and intro -->
@@ -35,7 +41,7 @@
 			</tr>
 			<tr>
 				<td><p></p></td>
-				<td><p> My interests are in forecasting, machine learning, and public policy. </p></td>
+				<td><p> My interests are in forecasting, machine learning, and visualization. </p></td>
 			</tr>
 			<tr>
 				<td><p></p></td>
@@ -60,6 +66,13 @@
 	<table><tr>
 		<td><a href="https://www.linkedin.com/in/bret-allinott-72286221a/">
 			<img src="./Pages/Icons/linkedin.png" height=64/>
+		</a></td>
+	</tr></table>
+	</div>
+	<div id = 'socials3' class='socials3'>
+	<table><tr>
+		<td><a href="https://public.tableau.com/app/profile/skyallinott">
+			<img src="./Pages/Icons/tableau.png" height=64/>
 		</a></td>
 	</tr></table>
 	</div>

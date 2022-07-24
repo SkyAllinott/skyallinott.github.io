@@ -22,33 +22,58 @@ div#intro td{
 	padding: 50px;
 }
 /*nav bar */
-div#navBar {
+nav {
+    display: table;
+    font-size: 40px;
 }
-div#navBar ul{
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	overflow:hidden;
-	background-color:#212121;
+nav ul {
+    display: table-row;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    list-style: none;
 }
-div#navBar a{
-	text-align:center;
-	padding:0px 60px;
-	text-decoration:none;
-	font-size:30px;
-	color: white;
+
+nav ul a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 35px;
 }
-div#navBar li{
-	float:left;
+nav ul li {
+    position: relative;
+    display: inline-block;
+    display: table-cell;
+    width: 1%;
+    list-style-type: none;
+    text-align: center;
 }
-	/*Add a background colour on mouse-over*/
-div#navBar a:hover{
-	background-color:#4CAF50;
+nav a:hover {
+    background-color: #4CAF50;
+    color: white;
+    border-bottom: 0px;
+}
+
+nav ul ul{
+    display: none;
+    position: absolute;
+    background: #3D3D3D;
+    width: 100%; 
+}
+nav ul ul li {
+    width: 100%;
+    display: inline-block;
+}
+nav ul li:hover > ul {
+    display: block;
 }
 	/*Style the current/active link*/
-div#navBar a.active {
+nav a.active {
 	background-color:#4CAF50;	
 }
+
 
 /* constants */
 .smallContent {
@@ -168,6 +193,9 @@ div.projectContent {
 	margin-left:5%;
 	margin-bottom: -2%;
 }
+.projectIcons1 h1{
+	padding-left: 15px;
+}
 img.projPic {
 	width: 100%;
 	margin-left: 8%;
@@ -211,4 +239,10 @@ div.socials2 a{
 	position: absolute;
 	bottom: 15px;
 	left: 100px;
+}
+
+div.socials3 a{
+	position: absolute;
+	bottom: 15px;
+	left: 185px;
 }

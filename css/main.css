@@ -25,7 +25,7 @@ main {
 .sidebar {
 	background-color: rgb(31, 27, 39);
 	margin-left: 20%;
-	margin-top: 5vh;
+	margin-top: 2vh;
 	padding: 5px;
 	min-width: 300px;
 	max-width: 500px;
@@ -123,7 +123,7 @@ h1.name {
 	flex-grow: 1;
 	padding: 20px;
 	margin-left: 1%;
-	margin-top: 5vh;
+	margin-top: 2vh;
 	margin-right: 20%;
 	border-radius: 20px;
 	background-color: var(--background-dark);
@@ -192,27 +192,20 @@ header.navbar {
 	padding: 10px;
 }
 
-.tech-stack-seperator {
-	background-color: var(--yellow);
-	width: 90px;
-	margin-top: 30px;
-	height: 2px;
-	border-radius: 10px;
-}
-
-p.tech-stack-title {
-	font-size: 18px;
-	margin-bottom: -25px;
+.tech-title {
+	margin-bottom: 0px;
+	text-decoration: underline 2px var(--yellow);
+	text-underline-offset: 7px;
 }
 
 .scroll {
   position: relative;
-  width: 100%; /* instead of 100vw */
+  width: 100%; 
   height: 60px;
   overflow: hidden;
   z-index: 1;
   margin-top: 0px;
-  background-color: var(--background-light); /* or dark */
+  background-color: var(--background-light);
   border-radius: 10px;
   margin-top: 30px;
 }

@@ -7,7 +7,7 @@
 	--yellow: rgb(255, 250, 160);
 }
 
-h1, h2, a, p {
+h1, h2, h3, a, p {
 	font-family: Arial, Helvetica, sans-serif;
 	color: var(--white);
 	margin: 0;
@@ -19,7 +19,7 @@ body {
 
 main {
   display: flex;
-  flex-direction: row; /* Default, can omit */
+  flex-direction: row; 
 }
 
 .sidebar {
@@ -27,8 +27,10 @@ main {
 	margin-left: 20%;
 	margin-top: 5vh;
 	padding: 5px;
-	width: 350px;
+	min-width: 300px;
+	max-width: 500px;
 	border-radius: 20px;
+	height: 500px;
 }
 
 .sidebar-info {
@@ -56,7 +58,8 @@ h1.name {
 	width: 90%;
 	margin-left: 5%;
 	box-sizing: border-box;
-	background-color: var(--white);
+	border-radius: 10px;
+	background-color: var(--yellow);
 }
 
 .basic-info {
@@ -126,7 +129,7 @@ h1.name {
 	background-color: var(--background-dark);
 	box-sizing: border-box;
 	position: relative; 
-	min-width: 600px;
+	min-width: 700px;
 }
 
 header.navbar {
@@ -139,16 +142,16 @@ header.navbar {
 }
 
 .navbar-list {
-  list-style: none;      /* Remove bullet points */
+  list-style: none;      
   padding: 0;
   margin: 0;
-  display: flex;         /* Align items side by side */
-  gap: 40px;             /* Optional: space between items */
+  display: flex;      
+  gap: 40px; 
 }
 
 .navbar-link {
   text-decoration: none;
-  color: var(--white);           /* Change to your theme color */
+  color: var(--white);   
   font-weight: bold;
   padding: 8px 12px;
 }
@@ -159,4 +162,132 @@ header.navbar {
 
 .navbar-link.active {
   color: var(--yellow)
+}
+
+.main-seperator {
+	background-color: var(--yellow);
+	margin-top: 5px;
+	width: 160px;
+	height: 2px;
+	border-radius: 10px;
+}
+
+.about-me {
+	margin-top: 10px;
+	font-size: 20px;
+	margin-bottom: -25px;
+}
+
+.about-me-section {
+	margin-top: 25px;
+	margin-bottom: 0px;
+	text-decoration: underline 2px var(--yellow);
+	text-underline-offset: 7px;
+}
+
+.tech-stacks {
+	margin-top: 50px;
+	background-color: var(--background-light);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.tech-stack-seperator {
+	background-color: var(--yellow);
+	width: 90px;
+	margin-top: 30px;
+	height: 2px;
+	border-radius: 10px;
+}
+
+p.tech-stack-title {
+	font-size: 18px;
+	margin-bottom: -25px;
+}
+
+.scroll {
+  position: relative;
+  width: 100%; /* instead of 100vw */
+  height: 60px;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 0px;
+  background-color: var(--background-light); /* or dark */
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.m-scroll {
+  display: flex;
+}
+
+.m-scroll__content {
+  display: flex;
+  animation: scrollText 10s linear infinite;
+}
+
+.m-scroll__content span {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.m-scroll__content img {
+  height: 60px;
+  width: 60px;
+  margin-left: 45px;
+}
+
+.m-scroll__content svg {
+  height: 60px;
+  width: 60px;
+  margin-left: 45px;
+}
+
+/* Original scrolling left */
+@keyframes scroll-left {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.m-scroll__content {
+	display: flex;
+	width: max-content;
+	animation: scroll-left 10s linear infinite;
+}
+
+/* New: scrolling right */
+@keyframes scroll-right {
+	from {
+		transform: translateX(-50%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+.m-scroll__content-reverse {
+	display: flex;
+	width: max-content;
+	animation: scroll-right 10s linear infinite;
+}
+
+.m-scroll__content-reverse span {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.m-scroll__content-reverse img {
+  height: 60px;
+  width: 60px;
+  margin-left: 45px;
+}
+
+.m-scroll__content:hover,
+.m-scroll__content-reverse:hover {
+  animation-play-state: paused;
+  cursor: pointer; /* Optional: shows something is interactive */
 }

@@ -24,8 +24,8 @@ main {
 
 .sidebar {
 	background-color: rgb(31, 27, 39);
-	margin-left: 5%;
-	margin-top: 5%;
+	margin-left: 20%;
+	margin-top: 5vh;
 	padding: 5px;
 	width: 350px;
 	border-radius: 20px;
@@ -119,11 +119,14 @@ h1.name {
 .main-content {
 	flex-grow: 1;
 	padding: 20px;
-	margin: 5%;
+	margin-left: 1%;
+	margin-top: 5vh;
+	margin-right: 20%;
 	border-radius: 20px;
 	background-color: var(--background-dark);
 	box-sizing: border-box;
 	position: relative; 
+	min-width: 600px;
 }
 
 header.navbar {

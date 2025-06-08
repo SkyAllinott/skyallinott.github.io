@@ -8,13 +8,13 @@
 	<body>
 		<main>
 			<aside class = "sidebar">
-				<div class = "sidebar-info">
-					<figure class = "avatar-box">
-						<img id = "Sky Allinott" width = 80 height = 80 loading = "eager" alt = "Sky Allinott" src = "./Icons/avatar.png">
+				<div class="sidebar-info">
+					<figure class="avatar-box">
+						<img id="Sky Allinott" width="80" height="80" loading="eager" alt="Sky Allinott" src="./Icons/avatar.png">
 					</figure>
-					<div class = "sidebar-info-content">
-						<h1 class = "name" title = "Sky Allinott"> Sky Allinott </h1>
-						<p class = "title"> Out Phishing </p>
+					<div class="sidebar-info-content">
+						<h1 class="name" title="Sky Allinott"> Sky Allinott </h1>
+						<p class="title"> Out Phishing 🎣</p>
 					</div>
 				</div>
 				<div class = "sidebar-content">
@@ -114,7 +114,182 @@
 						</ul>
 					</div>
 				</header>
+				<div class="main-content-header">
+					<h1 class="main-content-title">Sky's Research</h1>
+				</div>
+				<div class="research-seperator"></div>
+				<div class="filters">
+					<div>
+						<strong>Category:</strong>
+						<button class="filter-btn" data-filter-type="category" data-filter-value="all">All</button>
+						<button class="filter-btn" data-filter-type="category" data-filter-value="micro"> Micro Economics</button>
+						<button class="filter-btn" data-filter-type="category" data-filter-value="insurance"> Insurance </button>
+						<button class="filter-btn" data-filter-type="category" data-filter-value="other"> Other </button>
+					</div>
+				</div>
+			<div class="project-grid">
+				<div class="project-card micro">
+					<a href = "./Research/ValleyLine.pdf">
+						<img src="./Research/ValleyLine.png"/>
+					</a>
+					<div class="card-text">
+						Impact of a New LRT Line on Housing Prices
+						<br>
+						<small> Micro Economics </small>
+					</div>
+				</div>
+				<div class="project-card other">
+					<a href = "./Research/GasCartel.pdf">
+						<img src="./Research/GasCartel.png"/>
+					</a>
+					<div class="card-text">
+						Price Impact of Gasoline Cartel
+						<br>
+						<small> Other </small>
+					</div>
+				</div>
+				<div class="project-card insurance">
+					<a href = "https://albertaairb.ca/wp-content/uploads/2025/01/Mid-Year-Market-Report_2025.pdf">
+						<img src="./Research/m&t.png"/>
+					</a>
+					<div class="card-text">
+						Summary of Alberta's Auto Insurance Market
+						<br>
+						<small> Insurance </small>
+					</div>
+				</div>
+				<div class="project-card micro">
+					<a href = "./Research/CompAccess.pdf">
+						<img src="./Research/CompAccess.png"/>
+					</a>
+					<div class="card-text">
+						How Childhood Computer Access Impacts Lifetime Earning Potential
+						<br>
+						<small> Micro Economics </small>
+					</div>
+				</div>
+				<div class="project-card other">
+					<a href = "./Research/Investment.pdf">
+						<img src="./Research/Investment.png"/>
+					</a>
+					<div class="card-text">
+						Evaluating Methods to Forecast Canadian Investment
+						<br>
+						<small> Other </small>
+					</div>
+				</div>
 			</div>
 		</main>
+		<script>
+			const categoryButtons = document.querySelectorAll('[data-filter-type="category"]');
+			const languageButtons = document.querySelectorAll('[data-filter-type="language"]');
+			const projectCards = document.querySelectorAll('.project-card');
+			const paginationContainer = document.getElementById('pagination');
+
+			let selectedCategory = 'all';
+			let selectedLanguage = 'all';
+			let currentPage = 1;
+			const itemsPerPage = 6;
+
+			function updateActive(buttons, value) {
+			buttons.forEach(btn => {
+				btn.classList.toggle('active', btn.dataset.filterValue === value);
+			});
+			}
+
+			function getFilteredCards() {
+			return Array.from(projectCards).filter(card => {
+				const matchesCategory = selectedCategory === 'all' || card.classList.contains(selectedCategory);
+				const matchesLanguage = selectedLanguage === 'all' || card.classList.contains(selectedLanguage);
+				return matchesCategory && matchesLanguage;
+			});
+			}
+
+			function renderPagination(filteredCards) {
+			paginationContainer.innerHTML = '';
+			const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
+
+			if (totalPages <= 1) return; // no need for pagination
+
+			// Previous button
+			const prevBtn = document.createElement('button');
+			prevBtn.textContent = 'Previous';
+			prevBtn.classList.add('pagination-btn');
+			prevBtn.disabled = currentPage === 1;
+			prevBtn.addEventListener('click', () => {
+				if (currentPage > 1) {
+				currentPage--;
+				filterAndPaginate();
+				}
+			});
+			paginationContainer.appendChild(prevBtn);
+
+			// Page numbers
+			for (let i = 1; i <= totalPages; i++) {
+				const btn = document.createElement('button');
+				btn.textContent = i;
+				btn.classList.add('pagination-btn');
+				if (i === currentPage) btn.classList.add('active');
+				btn.addEventListener('click', () => {
+				currentPage = i;
+				filterAndPaginate();
+				});
+				paginationContainer.appendChild(btn);
+			}
+
+			// Next button
+			const nextBtn = document.createElement('button');
+			nextBtn.textContent = 'Next';
+			nextBtn.classList.add('pagination-btn');
+			nextBtn.disabled = currentPage === totalPages;
+			nextBtn.addEventListener('click', () => {
+				if (currentPage < totalPages) {
+				currentPage++;
+				filterAndPaginate();
+				}
+			});
+			paginationContainer.appendChild(nextBtn);
+			}
+
+			function filterAndPaginate() {
+			const filteredCards = getFilteredCards();
+
+			// Fix edge case: current page is now out of bounds
+			const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
+			if (currentPage > totalPages) currentPage = totalPages || 1;
+
+			projectCards.forEach(card => card.style.display = 'none');
+
+			const startIndex = (currentPage - 1) * itemsPerPage;
+			const endIndex = startIndex + itemsPerPage;
+
+			filteredCards.slice(startIndex, endIndex).forEach(card => {
+				card.style.display = 'block';
+			});
+
+			renderPagination(filteredCards);
+			}
+
+			categoryButtons.forEach(btn => {
+			btn.addEventListener('click', () => {
+				selectedCategory = btn.dataset.filterValue;
+				updateActive(categoryButtons, selectedCategory);
+				currentPage = 1;
+				filterAndPaginate();
+			});
+			});
+
+			languageButtons.forEach(btn => {
+			btn.addEventListener('click', () => {
+				selectedLanguage = btn.dataset.filterValue;
+				updateActive(languageButtons, selectedLanguage);
+				currentPage = 1;
+				filterAndPaginate();
+			});
+			});
+
+			// Initial render
+			filterAndPaginate();
+		</script>
 	</body>
 </html>

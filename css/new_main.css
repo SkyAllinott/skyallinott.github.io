@@ -4,7 +4,7 @@
 	--background-lighter: rgb(88, 88, 104);
 	--background-light: rgb(41, 41, 48);
 	--background-dark: rgb(31, 27, 39);
-	--accent: rgb(255, 250, 160);
+	--accent: rgb(86, 74, 148);
 }
 
 h1, h2, h3, a, p, li, small {
@@ -35,6 +35,8 @@ main {
 	max-width: 500px;
 	border-radius: 20px;
 	height: 535px;
+	border: solid var(--background-lighter);
+	border-width: 2px;
 }
 
 .sidebar-info {
@@ -111,7 +113,6 @@ h1.name {
 
 .icon {
   margin: 2px;
-  background-color: var(--background-lighter);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -166,13 +167,19 @@ h1.name {
 	min-height: 60vh;
 	display: flex;
 	flex-direction: column;
+	border: solid var(--background-lighter);
+	border-width: 2px;
 }
 
 header.navbar {
 	position: absolute;
 	top: 0;
 	right: 0;
-	background-color: var(--background-lighter);
+	background-color: var(--background-light);
+	border: solid var(--background-lighter);
+	border-width: 2px;
+	border-top: none;
+	border-right: none;
 	padding: 10px;
 	border-radius: 0 20px 0 20px; 
 }
@@ -340,7 +347,6 @@ header.navbar {
 
 .header-icon {
 	margin: 5px;
-	background-color: var(--background-lighter);
 	border-radius: 10px;
 	display: flex;
 	align-items: center;

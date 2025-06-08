@@ -129,7 +129,7 @@ h1.name {
 	background-color: var(--background-dark);
 	box-sizing: border-box;
 	position: relative; 
-	min-width: 700px;
+	min-width: 800px;
 }
 
 header.navbar {
@@ -282,5 +282,51 @@ header.navbar {
 .m-scroll__content:hover,
 .m-scroll__content-reverse:hover {
   animation-play-state: paused;
-  cursor: pointer; /* Optional: shows something is interactive */
+  cursor: pointer;
 }
+
+.resume-seperator {
+	background-color: var(--yellow);
+	margin-top: 5px;
+	width: 220px;
+	height: 2px;
+	border-radius: 10px;
+}
+
+.experience {
+	margin-top: 25px;
+	gap: 15px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.experience-icon {
+	margin: 5px;
+	background-color: var(--background-lighter);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.experience img {
+	margin: 2px;
+}
+
+.experience-header {
+	display:flex;
+}
+
+.experience-time {
+	justify-content: right;
+	align-items: right;
+	text-align: right;
+	margin-left: auto;
+}
+
+.experience-org {
+	justify-content: left;
+	align-items: left;
+}
+

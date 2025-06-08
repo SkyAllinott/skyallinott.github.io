@@ -4,10 +4,10 @@
 	--background-lighter: rgb(88, 88, 104);
 	--background-light: rgb(41, 41, 48);
 	--background-dark: rgb(31, 27, 39);
-	--yellow: rgb(255, 250, 160);
+	--accent: rgb(255, 250, 160);
 }
 
-h1, h2, h3, a, p {
+h1, h2, h3, a, p, li{
 	font-family: Arial, Helvetica, sans-serif;
 	color: var(--white);
 	margin: 0;
@@ -24,10 +24,10 @@ main {
 
 .sidebar {
 	background-color: rgb(31, 27, 39);
-	margin-left: 20%;
+	margin-left: 10vw;
 	margin-top: 2vh;
 	padding: 5px;
-	min-width: 300px;
+	min-width: 350px;
 	max-width: 500px;
 	border-radius: 20px;
 	height: 500px;
@@ -59,7 +59,7 @@ h1.name {
 	margin-left: 5%;
 	box-sizing: border-box;
 	border-radius: 10px;
-	background-color: var(--yellow);
+	background-color: var(--accent);
 }
 
 .basic-info {
@@ -116,7 +116,7 @@ h1.name {
 .data {
   font-size: 20px;
   margin-left: 10px;
-  color: #666;
+  color: var(--white);
 }
 
 .main-content {
@@ -157,15 +157,15 @@ header.navbar {
 }
 
 .navbar-link:hover {
-  color: var(--yellow)
+  color: var(--accent)
 }
 
 .navbar-link.active {
-  color: var(--yellow)
+  color: var(--accent)
 }
 
 .main-seperator {
-	background-color: var(--yellow);
+	background-color: var(--accent);
 	margin-top: 5px;
 	width: 160px;
 	height: 2px;
@@ -181,20 +181,20 @@ header.navbar {
 .about-me-section {
 	margin-top: 25px;
 	margin-bottom: 0px;
-	text-decoration: underline 2px var(--yellow);
+	text-decoration: underline 2px var(--accent);
 	text-underline-offset: 7px;
 }
 
 .tech-stacks {
 	margin-top: 50px;
-	background-color: var(--background-light);
+	background-color: var(--background-lighter);
 	border-radius: 10px;
 	padding: 10px;
 }
 
 .tech-title {
 	margin-bottom: 0px;
-	text-decoration: underline 2px var(--yellow);
+	text-decoration: underline 2px var(--accent);
 	text-underline-offset: 7px;
 }
 
@@ -205,7 +205,7 @@ header.navbar {
   overflow: hidden;
   z-index: 1;
   margin-top: 0px;
-  background-color: var(--background-light);
+  background-color: var(--background-lighter);
   border-radius: 10px;
   margin-top: 30px;
 }
@@ -227,13 +227,13 @@ header.navbar {
 .m-scroll__content img {
   height: 60px;
   width: 60px;
-  margin-left: 45px;
+  margin-left: 50px;
 }
 
 .m-scroll__content svg {
   height: 60px;
   width: 60px;
-  margin-left: 45px;
+  margin-left: 50px;
 }
 
 /* Original scrolling left */
@@ -286,14 +286,21 @@ header.navbar {
 }
 
 .resume-seperator {
-	background-color: var(--yellow);
+	background-color: var(--accent);
 	margin-top: 5px;
 	width: 220px;
 	height: 2px;
 	border-radius: 10px;
 }
 
-.experience {
+.resume-seperator-main {
+	margin-top: 10px;
+	height: 2px;
+	background-color: var(--accent);
+	width: 100%;
+}
+
+.header {
 	margin-top: 25px;
 	gap: 15px;
 	display: flex;
@@ -301,7 +308,7 @@ header.navbar {
 	align-items: center;
 }
 
-.experience-icon {
+.header-icon {
 	margin: 5px;
 	background-color: var(--background-lighter);
 	border-radius: 10px;
@@ -310,7 +317,7 @@ header.navbar {
 	justify-content: center;
 }
 
-.experience img {
+.header img {
 	margin: 2px;
 }
 
@@ -318,15 +325,40 @@ header.navbar {
 	display:flex;
 }
 
-.experience-time {
+.time {
 	justify-content: right;
 	align-items: right;
 	text-align: right;
 	margin-left: auto;
+	margin-top: 15px;
+	font-weight: bold;
 }
 
-.experience-org {
+.org {
 	justify-content: left;
 	align-items: left;
+	margin-top: 15px;
+	font-weight: bold;
 }
 
+.experience-subheader {
+	display: flex;
+}
+
+.role {
+	justify-content: left;
+	align-items: left;
+	font-style: italic;
+}
+
+.location {
+	justify-content: right;
+	align-items: right;
+	text-align: right;
+	margin-left: auto;
+	font-style: italic;
+}
+
+img.education {
+	margin-right: 4.5px;
+}

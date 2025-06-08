@@ -163,7 +163,7 @@ h1.name {
 	box-sizing: border-box;
 	position: relative; 
 	min-width: 800px;
-	min-height: 80vh;
+	min-height: 60vh;
 	display: flex;
 	flex-direction: column;
 }
@@ -263,13 +263,7 @@ header.navbar {
 .m-scroll__content img {
   height: 60px;
   width: 60px;
-  margin-left: 50px;
-}
-
-.m-scroll__content svg {
-  height: 60px;
-  width: 60px;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 /* Original scrolling left */
@@ -312,7 +306,7 @@ header.navbar {
 .m-scroll__content-reverse img {
   height: 60px;
   width: 60px;
-  margin-left: 45px;
+  margin-left: 100px;
 }
 
 .m-scroll__content:hover,

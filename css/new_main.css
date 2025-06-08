@@ -34,7 +34,7 @@ main {
 	min-width: 350px;
 	max-width: 500px;
 	border-radius: 20px;
-	height: 500px;
+	height: 535px;
 }
 
 .sidebar-info {
@@ -49,8 +49,8 @@ figure.avatar-box {
 }
 
 .avatar-box {
-  width: 80px;
-  height: 80px;
+  width: 115px;
+  height: 115px;
   border-radius: 100%;
   overflow: hidden;
 }

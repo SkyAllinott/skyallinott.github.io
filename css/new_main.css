@@ -279,7 +279,7 @@ header.navbar {
 .m-scroll__content {
 	display: flex;
 	width: max-content;
-	animation: scroll-left 10s linear infinite;
+	animation: scroll-left 45s linear infinite;
 }
 
 /* New: scrolling right */
@@ -295,7 +295,7 @@ header.navbar {
 .m-scroll__content-reverse {
 	display: flex;
 	width: max-content;
-	animation: scroll-right 10s linear infinite;
+	animation: scroll-right 45s linear infinite;
 }
 
 .m-scroll__content-reverse span {

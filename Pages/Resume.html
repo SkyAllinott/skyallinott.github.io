@@ -85,13 +85,7 @@
 					</div>
 					<div class = "last_updated">
 						<p id="last_updated"></p>
-						<script>
-							const lastModified = new Date(document.lastModified);
-							const options = { year: 'numeric', month: 'long', day: 'numeric' };
-							const formattedDate = lastModified.toLocaleDateString('en-US', options);
-
-							document.getElementById("last_updated").textContent = "Last updated on: " + formattedDate;
-						</script>
+						<script src="./last-updated.js"></script>
 					</div>
 				</div>
 			</aside>
@@ -128,105 +122,113 @@
 						</div>
 					</div>
 					<div class = "resume-seperator-main"></div>
-					<div class = "experience-header">
-						<div class = "org">
-							<p> Government of Alberta </p>
+					<div class = "goa-senior-ds">
+						<div class = "experience-header">
+							<div class = "org">
+								<p> Government of Alberta </p>
+							</div>
+							<div class = "time">
+								<p> June 2025 - Present </p>
+							</div>
 						</div>
-						<div class = "time">
-							<p> June 2025 - Present </p>
+						<div class = "experience-subheader">
+							<div class = "role">
+								<p> Senior Data Scientist </p>
+							</div>
+							<div class = "location">
+								<p> Edmonton, AB </p>
+							</div>
 						</div>
-					</div>
-					<div class = "experience-subheader">
-						<div class = "role">
-							<p> Senior Data Scientist </p>
-						</div>
-						<div class = "location">
-							<p> Edmonton, AB </p>
-						</div>
-					</div>
-					<div class = "experience-bullets">
-						<ul class = "list">
-							<li> Lead the data science team by creating and assigning projects to meet our strategic direction. </li>
-							<li> Conduct code review and approve pull requests for our codebase.  </li>
-							<li> Lead our IT team for the maintenance and enhancement of our 5TB SQL database. </li>
-							<li> Conduct research on complex actuarial and statistical topics such as Alberta's first chance discount and the ethicacy of certain rating variables. </li>
-							<li> Lower expenses for third-party actuaries by more than $25,000 annually by reviewing complex filings and drafting reports internally. </li>
-							<li> Determine if insurers are excessively profitable and required to return premiums to Albertans.  </li>
-							<li> Lead the project to alter industry data reporting to reflect Alberta's care-first reforms.   </li>
-						</ul>
-					</div>
-					<div class = "experience-header">
-						<div class = "org">
-							<p> Government of Alberta </p>
-						</div>
-						<div class = "time">
-							<p> October 2022 - June 2025 </p>
+						<div class = "experience-bullets">
+							<ul class = "list">
+								<li> Lead the data science team by creating and assigning projects to meet our strategic direction. </li>
+								<li> Conduct code review and approve pull requests for our codebase.  </li>
+								<li> Lead our IT team for the maintenance and enhancement of our 5TB SQL database. </li>
+								<li> Conduct research on complex actuarial and statistical topics such as Alberta's first chance discount and the ethicacy of certain rating variables. </li>
+								<li> Lower expenses for third-party actuaries by more than $25,000 annually by reviewing complex filings and drafting reports internally. </li>
+								<li> Determine if insurers are excessively profitable and required to return premiums to Albertans.  </li>
+								<li> Lead the project to alter industry data reporting to reflect Alberta's care-first reforms.   </li>
+							</ul>
 						</div>
 					</div>
-					<div class = "experience-subheader">
-						<div class = "role">
-							<p> Data Scientist </p>
+					<div class = "goa-ds">
+						<div class = "experience-header">
+							<div class = "org">
+								<p> Government of Alberta </p>
+							</div>
+							<div class = "time">
+								<p> October 2022 - June 2025 </p>
+							</div>
 						</div>
-						<div class = "location">
-							<p> Edmonton, AB </p>
+						<div class = "experience-subheader">
+							<div class = "role">
+								<p> Data Scientist </p>
+							</div>
+							<div class = "location">
+								<p> Edmonton, AB </p>
+							</div>
 						</div>
-					</div>
-					<div class = "experience-bullets">
-						<ul class = "list">
-							<li> Leveraged the Cloudera platform to deploy R Shiny applications to the cloud. </li>
-							<li> Summarized insurance data and created graphics with R and Rmarkdown. </li>
-							<li> Improved data accessibility within the organisation and for the public by utilising SQL to create Power BI dashboards. </li>
-							<li> Utilised Git for version control, documentation and project management.</li>
-							<li> Presented data analytics to various stakeholders such as our board and the Government.</li>
-							<li> Reviewed insurer rate filings with complex segmentation or machine learning. </li>
-						</ul>
-					</div>
-					<div class = "experience-header">
-						<div class = "org">
-							<p> University of Alberta </p>
-						</div>
-						<div class = "time">
-							<p> August 2022 - December 2022 </p>
-						</div>
-					</div>
-					<div class = "experience-subheader">
-						<div class = "role">
-							<p> Research Contractor </p>
-						</div>
-						<div class = "location">
-							<p> Edmonton, AB </p>
+						<div class = "experience-bullets">
+							<ul class = "list">
+								<li> Leveraged the Cloudera platform to deploy R Shiny applications to the cloud. </li>
+								<li> Summarized insurance data and created graphics with R and Rmarkdown. </li>
+								<li> Improved data accessibility within the organisation and for the public by utilising SQL to create Power BI dashboards. </li>
+								<li> Utilised Git for version control, documentation and project management.</li>
+								<li> Presented data analytics to various stakeholders such as our board and the Government.</li>
+								<li> Reviewed insurer rate filings with complex segmentation or machine learning. </li>
+							</ul>
 						</div>
 					</div>
-					<div class = "experience-bullets">
-						<ul class = "experience-list">
-							<li> Constructed a rich panel dataset (4 million rows, 100+ features) on Edmonton and Calgary real estate. </li>
-							<li> Created measures on crime, transit accessibility, development activity, pollution levels and more. </li>
-							<li> Insight: Half the properties in the City of Edmonton do not live within 1km of a grocery store.</li>
-						</ul>
+					<div class = "uofa-research">
+						<div class = "experience-header">
+							<div class = "org">
+								<p> University of Alberta </p>
+							</div>
+							<div class = "time">
+								<p> August 2022 - December 2022 </p>
+							</div>
+						</div>
+						<div class = "experience-subheader">
+							<div class = "role">
+								<p> Research Contractor </p>
+							</div>
+							<div class = "location">
+								<p> Edmonton, AB </p>
+							</div>
+						</div>
+						<div class = "experience-bullets">
+							<ul class = "experience-list">
+								<li> Constructed a rich panel dataset (4 million rows, 100+ features) on Edmonton and Calgary real estate. </li>
+								<li> Created measures on crime, transit accessibility, development activity, pollution levels and more. </li>
+								<li> Insight: Half the properties in the City of Edmonton do not live within 1km of a grocery store.</li>
+							</ul>
+						</div>
 					</div>
-					<div class = "experience-header">
-						<div class = "org">
-							<p> City of Edmonton </p>
+					<div class = "coe-analyst">
+						<div class = "experience-header">
+							<div class = "org">
+								<p> City of Edmonton </p>
+							</div>
+							<div class = "time">
+								<p> May 2021 - September 2021 </p>
+							</div>
 						</div>
-						<div class = "time">
-							<p> May 2021 - September 2021 </p>
+						<div class = "experience-subheader">
+							<div class = "role">
+								<p> Student Business Analyst </p>
+							</div>
+							<div class = "location">
+								<p> Edmonton, AB </p>
+							</div>
 						</div>
-					</div>
-					<div class = "experience-subheader">
-						<div class = "role">
-							<p> Student Business Analyst </p>
+						<div class = "experience-bullets">
+							<ul class = "list">
+								<li> Determined if City initiatives to reduce permit timelines were successful using internal data. </li>
+								<li>Communicated success and failure of programs to senior City leadership. </li>
+								<li> Improved team forecasting by introducing time series machine learning models for variable selection.</li>
+								<li> Reduced data gathering times by using R to pull regularly used data through API requests. </li>
+							</ul>
 						</div>
-						<div class = "location">
-							<p> Edmonton, AB </p>
-						</div>
-					</div>
-					<div class = "experience-bullets">
-						<ul class = "list">
-							<li> Determined if City initiatives to reduce permit timelines were successful using internal data. </li>
-							<li>Communicated success and failure of programs to senior City leadership. </li>
-							<li> Improved team forecasting by introducing time series machine learning models for variable selection.</li>
-							<li> Reduced data gathering times by using R to pull regularly used data through API requests. </li>
-						</ul>
 					</div>
 				</div>
 				<div class = "education">
@@ -239,53 +241,30 @@
 						</div>
 					</div>
 					<div class = "resume-seperator-main"></div>
-					<div class = "experience-header">
-						<div class = "org">
-							<p> University of Alberta </p>
+					<div class = "masters">
+						<div class = "experience-header">
+							<div class = "org">
+								<p> University of Alberta </p>
+							</div>
+							<div class = "time">
+								<p> June 2022 </p>
+							</div>
 						</div>
-						<div class = "time">
-							<p> June 2022 </p>
+						<div class = "experience-subheader">
+							<div class = "role">
+								<p> Master of Arts, Economics </p>
+							</div>
+							<div class = "location">
+								<p> Edmonton, AB </p>
+							</div>
 						</div>
-					</div>
-					<div class = "experience-subheader">
-						<div class = "role">
-							<p> Master of Arts, Economics </p>
+						<div class = "experience-bullets">
+							<ul class = "list">
+								<li> Masters thesis was quantifying the impact on real estate prices of Edmonton's Valley Line. Effect was quantified by distance to new stations, project stage, and property value quantiles.</li>
+								<li> Focused on industrial organization, particularly competition, and econometrics.</li>
+								<li> Prioritized classes with computer science components and programming. </li>
+							</ul>
 						</div>
-						<div class = "location">
-							<p> Edmonton, AB </p>
-						</div>
-					</div>
-					<div class = "experience-bullets">
-						<ul class = "list">
-							<li> Determined if City initiatives to reduce permit timelines were successful using internal data. </li>
-							<li>Communicated success and failure of programs to senior City leadership. </li>
-							<li> Improved team forecasting by introducing time series machine learning models for variable selection.</li>
-							<li> Reduced data gathering times by using R to pull regularly used data through API requests. </li>
-						</ul>
-					</div>
-										<div class = "experience-header">
-						<div class = "org">
-							<p> University of Alberta </p>
-						</div>
-						<div class = "time">
-							<p> April 2021 </p>
-						</div>
-					</div>
-					<div class = "experience-subheader">
-						<div class = "role">
-							<p> Bachelor of Arts With Honors, Economics </p>
-						</div>
-						<div class = "location">
-							<p> Edmonton, AB </p>
-						</div>
-					</div>
-					<div class = "experience-bullets">
-						<ul class = "list">
-							<li> Determined if City initiatives to reduce permit timelines were successful using internal data. </li>
-							<li>Communicated success and failure of programs to senior City leadership. </li>
-							<li> Improved team forecasting by introducing time series machine learning models for variable selection.</li>
-							<li> Reduced data gathering times by using R to pull regularly used data through API requests. </li>
-						</ul>
 					</div>
 				</div>
 			</div>

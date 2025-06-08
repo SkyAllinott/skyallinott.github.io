@@ -91,12 +91,7 @@
 
 				<div class="last_updated">
 					<p id="last_updated"></p>
-					<script>
-						const lastModified = new Date(document.lastModified);
-						const options = { year: 'numeric', month: 'long', day: 'numeric' };
-						const formattedDate = lastModified.toLocaleDateString('en-US', options);
-						document.getElementById("last_updated").textContent = "Last updated on: " + formattedDate;
-					</script>
+					<script src="./Pages/last-updated.js"></script>
 				</div>
 			</div>
 		</aside>

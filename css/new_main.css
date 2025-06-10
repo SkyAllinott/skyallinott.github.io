@@ -490,7 +490,6 @@ img.education {
 .project-grid-wrapper {
 	display: flex;
 	justify-content: center;
-	padding: 1rem;
 }
 
 .project-grid {
@@ -498,7 +497,7 @@ img.education {
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 10px;
 	width: 100%;
-	max-width: calc(3 * 350px + 2 * 10px); /* max 3 columns + 2 gaps */
+	max-width: calc(3 * 950px + 2 * 10px); /* max 3 columns + 2 gaps */
 	align-content: start;
 }
 
@@ -513,15 +512,13 @@ img.education {
 	align-items: center;
 	transition: transform 0.2s ease;
 	justify-content: flex-start;
-	max-width: 350px;
+	max-width: 950px;
 	width: 100%;
 	margin: 0; /* center each card if fewer items */
 }
 
 .project-card img {
 	margin-top: 10px;
-	margin-left: -5px;
-	margin-right: -5px;
 	border-radius: 10px;
 	height: 200px;
 	width: 300px;

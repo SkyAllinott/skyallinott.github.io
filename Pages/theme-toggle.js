@@ -1,19 +1,30 @@
-const savedTheme = localStorage.getItem('theme');
+const savedTheme = localStorage.getItem('theme') || 'theme-dark';
+
+const iconLight = document.getElementById('icon-light');
+const iconDark = document.getElementById('icon-dark');
+
+function applyTheme(theme) {
+  document.body.classList.remove('theme-light', 'theme-dark');
+  document.body.classList.add(theme);
+  localStorage.setItem('theme', theme);
+
+  if (theme === 'theme-light') {
+    if (iconLight) iconLight.style.display = 'inline';
+    if (iconDark) iconDark.style.display = 'none';
+  } else {
+    if (iconLight) iconLight.style.display = 'none';
+    if (iconDark) iconDark.style.display = 'inline';
+  }
+}
 
 // Apply saved or default theme on load
-if (savedTheme === 'theme-light') {
-  document.body.classList.add('theme-light');
-} else {
-  document.body.classList.add('theme-dark');
-}
+applyTheme(savedTheme);
 
 // Add click handlers for each SVG path
 document.getElementById('light-mode')?.addEventListener('click', () => {
-  document.body.classList.replace('theme-dark', 'theme-light');
-  localStorage.setItem('theme', 'theme-light');
+  applyTheme('theme-light');
 });
 
 document.getElementById('dark-mode')?.addEventListener('click', () => {
-  document.body.classList.replace('theme-light', 'theme-dark');
-  localStorage.setItem('theme', 'theme-dark');
+  applyTheme('theme-dark');
 });

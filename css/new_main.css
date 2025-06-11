@@ -14,47 +14,6 @@ h1, h2, h3, a, p, li, small {
 	box-sizing: border-box;
 }
 
-body.theme-dark {
-  background-color: #111;
-  color: #eee;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.theme-light {
-  background-color: #fff;
-  color: #222;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Icon visibility */
-.icon-dark {
-  display: inline;
-  width: 50px;
-  height: 50px;
-}
-
-.icon-light {
-  display: none;
-  width: 50px;
-  height: 50px;
-}
-
-body.theme-light .icon-dark {
-  display: none;
-}
-
-body.theme-light .icon-light {
-  display: inline;
-}
-
-/* Button styling */
-#theme-toggle {
-  margin: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
 body {
 	background-color: var(--background-light);
 	font-family: Arial, Helvetica, sans-serif;
@@ -495,7 +454,7 @@ img.education {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
 	gap: 10px;
-	max-width: calc(3 * 350px + 2 * 10px); /* max 3 columns + 2 gaps */
+	max-width: calc(3 * 300px + 2 * 10px); /* max 3 columns + 2 gaps */
 	margin: 0 auto;
 	justify-items: start;
 }
@@ -512,7 +471,7 @@ img.education {
 	justify-content: center;
 	transition: transform 0.2s ease;
 	justify-content: flex-start;
-	max-width: 350px;
+	max-width: 300px;
 	width: 100%;
 	margin: 0; /* center each card if fewer items */
 }

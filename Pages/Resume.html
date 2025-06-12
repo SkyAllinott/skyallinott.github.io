@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html id="home">
 	<head>
-		<link href="../css/new_main.css" type="text/css" rel="stylesheet"/>
-		<title>Resume</title>
+		<script>
+			(function() {
+			try {
+				const theme = localStorage.getItem('theme') || 'theme-dark';
+				document.documentElement.classList.add(theme);
+			} catch (e) {
+				document.documentElement.classList.add('theme-dark');
+			}
+			})();
+		</script>
+
+		<style>
+			:root {
+			--white: rgb(255, 255, 255);
+			--background-lighter: rgb(88, 88, 104);
+			--background-light: rgb(41, 41, 48);
+			--background-dark: rgb(31, 27, 39);
+			--accent: rgb(86, 74, 148);
+			--accent-light: rgb(72, 176, 209);
+			}
+			html.theme-dark {
+			background-color: var(--background-light);
+			color: #eee;
+			transition: background-color 0.3s, color 0.3s;
+			}
+			html.theme-light {
+			background-color: var(--white);
+			color: #000;
+			transition: background-color 0.3s, color 0.3s;
+			}
+			html:not(.theme-light):not(.theme-dark) {
+			visibility: hidden;
+			}
+		</style>
+
+		<link rel="preload" href="../css/new_main.css" as="style" />
+		<link href="../css/new_main.css" rel="stylesheet" />
+	
+		<title>About</title>
 		<link rel="icon" type="image/x-icon" href="./Icons/favicon.svg">
 	</head>
-
-	<body>
+	<body hidden>
 		<main>
 			<div class = "content-wrapper">
 				<div class="sidebar">
@@ -320,5 +356,10 @@
 				</div>
 			</div>
 		</main>
+		<script>
+			window.addEventListener('load', () => {
+				document.body.hidden = false;
+			});
+		</script>
 	</body>
 </html>

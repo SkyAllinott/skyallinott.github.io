@@ -4,8 +4,8 @@ const iconLight = document.getElementById('icon-light');
 const iconDark = document.getElementById('icon-dark');
 
 function applyTheme(theme) {
-  document.body.classList.remove('theme-light', 'theme-dark');
-  document.body.classList.add(theme);
+  document.documentElement.classList.remove('theme-light', 'theme-dark');
+  document.documentElement.classList.add(theme);
   localStorage.setItem('theme', theme);
 
   if (theme === 'theme-light') {
@@ -21,10 +21,10 @@ function applyTheme(theme) {
 applyTheme(savedTheme);
 
 // Add click handlers for each SVG path
-document.getElementById('light-mode')?.addEventListener('click', () => {
-  applyTheme('theme-light');
-});
+document.querySelectorAll('#light-mode').forEach(el =>
+  el.addEventListener('click', () => applyTheme('theme-light'))
+);
 
-document.getElementById('dark-mode')?.addEventListener('click', () => {
-  applyTheme('theme-dark');
-});
+document.querySelectorAll('#dark-mode').forEach(el =>
+  el.addEventListener('click', () => applyTheme('theme-dark'))
+);

@@ -63,9 +63,13 @@ html.theme-light .icon-light {
 	padding: 5px;
 	width: 375px;
 	border-radius: 20px;
-	height: 575px;
+	height: 600px;
 	border-width: 2px;
 	flex-shrink: 0;
+}
+
+.sidebar-content {
+	font-size: 20px;
 }
 
 html.theme-dark .sidebar {
@@ -357,6 +361,10 @@ html.theme-light .main-seperator {
 	margin-bottom: -25px;
 }
 
+p.about-me {
+	font-size: 20px;
+}
+
 .about-me-section {
 	margin-top: 25px;
 	margin-bottom: 0px;
@@ -564,12 +572,28 @@ html.theme-light svg.work-icon {
 	justify-content: center;
 }
 
+.header-title {
+	font-size: 22px;
+}
+
 .header img {
 	margin: 2px;
 }
 
 .experience-header {
 	display:flex;
+	font-size: 21px;
+}
+
+.experience-subheader {
+	display: flex;
+	font-size: 19px;
+	font-style: italic;
+}
+
+.experience-bullets {
+	font-size: 20px;
+	margin-top: -15px;
 }
 
 .time {
@@ -588,14 +612,9 @@ html.theme-light svg.work-icon {
 	font-weight: bold;
 }
 
-.experience-subheader {
-	display: flex;
-}
-
 .role {
 	justify-content: left;
 	align-items: left;
-	font-style: italic;
 }
 
 .location {
@@ -603,7 +622,6 @@ html.theme-light svg.work-icon {
 	align-items: right;
 	text-align: right;
 	margin-left: auto;
-	font-style: italic;
 }
 
 .filters {
